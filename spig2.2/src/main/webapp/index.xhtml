@@ -105,6 +105,48 @@
                             <div id="contact-content">
                                 <div class="section-heading">
                                     <h1>
+                                        <div>Iniciar sesión</div>
+                                        <em>SPIG</em>
+                                    </h1>
+                                    <p>Ingresa y haz que el mundo
+                                    <br></br>conozca lo que te gusta.</p>
+                                </div>
+                                <div class="section-content">
+                                    <h:form id="contact">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                              <fieldset>
+                                                  <p:inputText class="texto" value="#{consultarInformador.info}" required="true" placeholder="correo"/>
+                                              </fieldset>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <fieldset>
+                                                  <p:inputText class="texto" value="" required="true" placeholder="contraseña"/>
+                                              </fieldset>
+                                            </div>
+                                            <div class="col-md-2">
+                                              <fieldset>
+                                                    <h:selectOneRadio value="#{consultarInformador.tipoBusqueda}" required="true" validatorMessage="falta el tipo de búsqueda" requiredMessage="falta el tipo de búsqueda">
+                                                        <f:selectItem itemValue="informador" itemLabel="informador." />
+                                                        <f:selectItem itemValue="comentarista" itemLabel="comentarista." />
+                                                        <f:selectItem itemValue="administrador" itemLabel="administrador." />
+                                                    </h:selectOneRadio>
+                                              </fieldset>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <fieldset>
+                                                <p:commandButton id="form-submit" class="texto btn" action="#{consultarInformador.busca()}" value="Consultar" style="margin-right:20px;" ajax="false"/>
+                                              </fieldset>
+                                            </div>
+                                        </div>
+                                        <p:growl id="growl" life="4000" />
+                                    </h:form>
+                                </div>
+
+                                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                                <div class="section-heading">
+                                    <h1>
                                         <div>Regístrate</div>
                                         <em>SPIG</em>
                                     </h1>
